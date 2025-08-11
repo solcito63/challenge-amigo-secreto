@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Juego del Amigo Secreto</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Monomaniac+One&family=Orbitron:wght@400..900&display=swap');
+    </style>
+</head>
+
+<body>
+    <main class="main-content">
+        <header class="header-banner">
+            <h1 class="main-title">JUEGO DEL AMIGO SECRETO</h1>
+            
+            <img class="imagen" src="assets/amigo-secreto.png" alt="Imagen del amigo secreto" />
+            </header>
+        
+        <section class="input-section">
+            <h2 class="section-title">AGREGA EL NOMBRE DE TUS AMIGOS</h2>
+            <div class="input-wrapper">
+                <label for="amigo" class="visually-hidden">Nombre del amigo</label>
+                <input type="text" id="amigo" class="input-name" placeholder="Escribe un nombre" aria-label="Nombre del amigo" />
+                <button class="button-add" onclick="agregarAmigo()">Añadir</button>
+            </div>
+           
+            <ul id="listaAmigos" class="name-list" aria-labelledby="listaAmigos" role="list"></ul>
+            <ul id="resultado" class="result-list" aria-live="polite"></ul>
+
+            <div class="button-container">
+              <button class="button-draw" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">
+                  <img src="assets/img/sorteo1.png" alt="Ícono para sortear" />
+                  Sortear
+              </button>
+              <button class="button-reset" onclick="resetear()" aria-label="Resetear lista de amigos">
+                  <img src="assets/img/reiniciar0.png" alt="Ícono para reiniciar" />
+                  Reiniciar
+              </button>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p class="information">Curso Alura Latam-G9 | Lucia Sol Ramos</p>
+        </footer>
+    </main>
+
+    <script src="app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
